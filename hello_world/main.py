@@ -12,6 +12,7 @@ class HealthCheck(tornado.web.RequestHandler):
 def make_app():
     return tornado.web.Application([
         (r"/", MainHandler),
+        (r"/healthcheck", HealthCheck),
     ])
 
 if __name__ == "__main__":
